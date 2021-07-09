@@ -1,10 +1,6 @@
-from __future__ import print_function
 from simtk.openmm.app import *
 from simtk.openmm import *
 from simtk.unit import *
-from time import gmtime, strftime
-from datetime import datetime
-import os
 from parmed.gromacs import GromacsGroFile, GromacsTopologyFile
 
 

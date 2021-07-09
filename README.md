@@ -26,7 +26,7 @@ for _ in range(5):
 will lower the temperature from 300 K to 10 K, and then raise it again to 300 K over 5 cycles.
 This can be observed when plotting the data in
 [anneal/anneal.csv](anneal/anneal.csv):
-![](images/temp.pdf)
+![](images/temp.png)
 
 Here is the effect on potential energy:
-![](images/pot.pdf)
+![](images/pot.png)

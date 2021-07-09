@@ -2,7 +2,7 @@
 
 Simulated annealing in the NVT ensemble of a box of 500 TIP4P water molecules.
 
-General workflow would be equilibrate the simulation in the NPT ensemble prior to annealing.
+General workflow would be to equilibrate the simulation in the NPT ensemble prior to annealing.
 
 # Structure generation
 

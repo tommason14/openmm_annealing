@@ -14,7 +14,7 @@ gromacs readers were used instead.
 
 # Annealing
 
-An anneal function has been included in the [input file](anneal/anneal.py) so that looping
+An `anneal` function has been included in the [input file](anneal/anneal.py) so that looping
 can be used to generate temperature fluctuations. For example:
 
 ```

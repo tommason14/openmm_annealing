@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --ntasks=4
+#SBATCH --ntasks-per-node=4
+#SBATCH --mem=20G
+#SBATCH --gres=gpu:P100:1
+#SBATCH --time=2:00:00
+#SBATCH --partition=gpu,short
+
+module purge
+module load openmm/7.4
+
+time python npt.py >& npt.log
+find . -empty delete

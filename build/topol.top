@@ -1,0 +1,17 @@
+[ defaults ]
+; nbfunc  comb-rule  gen-pairs  fudgeLJ  fudgeQQ
+     1      2          yes     0.5000     0.8333
+
+[ atomtypes ]
+;     name       mass     charge      ptype      sigma      epsilon
+HW_tip4p     1       1.008   0.0000  A   0.00000e+00  0.00000e+00
+OW_tip4p     8        16.00  0.0000  A   3.15365e-01  6.48520e-01
+MW           0       0.0000  0.0000  D   0.00000e+00  0.00000e+00
+
+#include "tip4p.itp"
+
+[ system ]
+TIP4P box
+
+[ molecules ]
+WAT    500

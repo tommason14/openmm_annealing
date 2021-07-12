@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH --ntasks=4
+#SBATCH --ntasks-per-node=4
+#SBATCH --mem=20G
+#SBATCH --gres=gpu:P100:1
+#SBATCH --time=1:30:00
+#SBATCH --partition=gpu,short
+
+module purge
+module load openmm-velocity-verlet/7.4
+
+time python anneal.py \
+  --gro ../build/conf.gro \
+  --prm ../build/ff.prm \
+  --psf ../build/topol.psf \
+  -tmax 300 \
+  -tmin 10 \
+  -n 5 \
+  -tfinal 10 \
+  --cpt ../npt/cpt.cpt_1000000 >& npt.log

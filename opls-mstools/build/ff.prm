@@ -1,0 +1,114 @@
+* Created by mstools
+*
+
+ATOMS
+  MASS      1        CAT    12.0110
+  MASS      2        DP_     0.0000
+  MASS      3        CAO    12.0110
+  MASS      4        CAM    12.0110
+  MASS      5        CAP    12.0110
+  MASS      6        CTT    12.0110
+  MASS      7        HAT     1.0080
+  MASS      8         HT     1.0080
+  MASS      9         OW    15.9994
+  MASS     10         HW     1.0079
+  MASS     11      VS_OW     0.0000
+
+BONDS
+!V(bond) = Kb(b - b0)**2
+!Kb: kcal/mole/A**2
+!b0: A
+!
+!      atom type Kb          b0
+       CAT        CAO       468.999761     1.4000
+       CAO        CAM       468.999761     1.4000
+       CAM        CAP       468.999761     1.4000
+       CAT        CTT       317.005258     1.5100
+       CAO        HAT       367.000478     1.0800
+       CAM        HAT       367.000478     1.0800
+       CAP        HAT       367.000478     1.0800
+       CTT         HT       340.000000     1.0900
+       CAT        DP_       500.000000     0.0000
+       CAO        DP_       500.000000     0.0000
+       CAM        DP_       500.000000     0.0000
+       CAP        DP_       500.000000     0.0000
+       CTT        DP_       500.000000     0.0000
+       HAT        DP_       500.000000     0.0000
+        HT        DP_       500.000000     0.0000
+        OW         HW       600.401530     0.9572
+        OW        DP_       500.000000     0.0000
+
+ANGLES
+!V(angle) = Ktheta(Theta - Theta0)**2
+!V(Urey-Bradley) = Kub(S - S0)**2
+!Ktheta: kcal/mole/rad**2
+!Theta0: degrees
+!Kub: kcal/mole/A**2 (Urey-Bradley)
+!S0: A
+!
+!      atom types     Ktheta    Theta0   Kub     S0
+       CAO        CAT        CTT    70.004780     120.0000
+       CAO        CAT        CAO    63.000000     120.0000
+       CAT        CAO        CAM    63.000000     120.0000
+       CAT        CAO        HAT    35.000000     120.0000
+       CAM        CAO        HAT    35.000000     120.0000
+       CAO        CAM        CAP    63.000000     120.0000
+       CAO        CAM        HAT    35.000000     120.0000
+       CAP        CAM        HAT    35.000000     120.0000
+       CAM        CAP        CAM    63.000000     120.0000
+       CAM        CAP        HAT    35.000000     120.0000
+       CAT        CTT         HT    50.000000     109.5000
+        HT        CTT         HT    33.000000     107.8000
+        HW         OW         HW    75.050191     104.5200
+
+DIHEDRALS
+!V(dihedral) = Kchi(1 + cos(n(chi) - delta))
+!Kchi: kcal/mole
+!n: multiplicity
+!delta: degrees
+!
+!atom types             Kchi    n   delta
+       CTT        CAT        CAO        CAM     3.625000    2   180.00
+       CTT        CAT        CAO        HAT     3.625000    2   180.00
+       CAO        CAT        CAO        CAM     3.625000    2   180.00
+       CAO        CAT        CAO        HAT     3.625000    2   180.00
+       CAT        CAO        CAM        CAP     3.625000    2   180.00
+       CAT        CAO        CAM        HAT     3.625000    2   180.00
+       HAT        CAO        CAM        CAP     3.625000    2   180.00
+       HAT        CAO        CAM        HAT     3.625000    2   180.00
+       CAO        CAM        CAP        CAM     3.625000    2   180.00
+       CAO        CAM        CAP        HAT     3.625000    2   180.00
+       HAT        CAM        CAP        CAM     3.625000    2   180.00
+       HAT        CAM        CAP        HAT     3.625000    2   180.00
+
+IMPROPERS
+!V(improper) = Kpsi(psi - psi0)**2
+!Kpsi: kcal/mole/rad**2
+!psi0: degrees
+!
+!      atom types           Kpsi      ignored         psi0
+       CAT        CAO        CAO        CTT     1.100000    0     0.00
+       CAO        CAT        CAM        HAT     1.100000    0     0.00
+       CAM        CAO        CAP        HAT     1.100000    0     0.00
+       CAP        CAM        CAM        HAT     1.100000    0     0.00
+       CAM        CAP        CAO        HAT     1.100000    0     0.00
+
+NONBONDED
+!V(Lennard-Jones) = Eps,i,j[(Rmin,i,j/ri,j)**12 - 2(Rmin,i,j/ri,j)**6]
+!epsilon: kcal/mole, Eps,i,j = sqrt(eps,i * eps,j)
+!Rmin/2: A, Rmin,i,j = Rmin/2,i + Rmin/2,j
+!
+!      atom  ignored    epsilon      Rmin/2   ignored   eps,1-4       Rmin/2,1-4
+       CAT     0.0000    -0.070000     1.992370     0.0000    -0.035000     1.992370  ! 
+       DP_     0.0000    -0.000000     0.000000     0.0000    -0.000000     0.000000  ! 
+       CAO     0.0000    -0.070000     1.992370     0.0000    -0.035000     1.992370  ! 
+       CAM     0.0000    -0.070000     1.992370     0.0000    -0.035000     1.992370  ! 
+       CAP     0.0000    -0.070000     1.992370     0.0000    -0.035000     1.992370  ! 
+       CTT     0.0000    -0.065999     1.964309     0.0000    -0.033000     1.964309  ! 
+       HAT     0.0000    -0.030000     1.358179     0.0000    -0.015000     1.358179  ! 
+        HT     0.0000    -0.030000     1.358179     0.0000    -0.015000     1.358179  ! 
+        OW     0.0000    -0.210940     1.786932     0.0000    -0.105470     1.786932  ! 
+        HW     0.0000    -0.000000     0.000000     0.0000    -0.000000     0.000000  ! 
+     VS_OW     0.0000    -0.000000     0.000000     0.0000    -0.000000     0.000000  ! 
+
+END

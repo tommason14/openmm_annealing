@@ -1,0 +1,8 @@
+# Structure generation
+
+Creation of simulation files is handled via the [mstools package](https://github.com/z-gong/ms-tools),
+so ensure this is installed prior to running `create_openmm.py`.
+
+Many types of labelled geometry files cna be used including xyz, zmat or pdb formats. Forcefield files must be accepted by `mstools`, so an fftool-compatible format is recommended. If virtual sites are
+required (i.e. for TIP4P or SWM4-NDP water models), the zfp style must be used as the fftool format doesn't support virtual sites.
+An fftool forcefield can be converted to a zfp style with the ffconv script distributed with the mstools package, to allow for combination with other files that include virtual site terms.
